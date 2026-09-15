@@ -1,0 +1,17 @@
+class Solution {
+    public int findLucky(int[] arr) {
+        int largestLucky = -1;
+        for (int i = 0; i < arr.length; i++) {
+            int frequency = 0;
+            for (int j = 0; j < arr.length; j++) {
+                if (arr[i] == arr[j]) {
+                    frequency++;
+                }
+            }
+            if (frequency == arr[i]) {
+                largestLucky = Math.max(largestLucky,arr[i]);
+            } 
+        }
+        return largestLucky;
+    }
+}
